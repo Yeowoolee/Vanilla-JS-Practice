@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- jQuery는 
+1. 엘리먼트를 선택할 수 있는 강력한 방법
+2. 선택된 엘리먼트를 효율적으로 제어할 수 있는 방법
+ -->
+
+<body>
+    <h1 id="one">hello world</h1>
+    <p>123</p>
+    <button id="two" onclick="f()">눌러!!</button>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        // function f() {
+        //     $('#one').html('반갑습니다!!!')
+
+        // };
+        $('#two').click(
+            function f(){
+                $('p').html('반갑습니다.');
+            }
+        )
+    </script>
+</body>
+
+</html>

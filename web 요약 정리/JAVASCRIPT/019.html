@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1 class='one'>hello world 1</h1>
+<h1 class="one two">hello world 2</h1>
+<h1 id='four' class="one two three">hello world 3</h1>
+<h1>hello world 4</h1>
+<h1>hello world 5</h1>
+<h1>hello world 6</h1>
+<!-- jQuery는 
+1. 엘리먼트를 선택할 수 있는 강력한 방법
+2. 선택된 엘리먼트를 효율적으로 제어할 수 있는 방법
+ -->
+
+<body>
+    <h1 id="one">hello world</h1>
+    <p>123</p>
+    <button id="two" onclick="f()">눌러!!</button>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        // function f() {
+        //     $('#one').html('반갑습니다!!!')
+
+        // };
+        $('#two').click(
+            function f(){
+                $('h1:odd').html('반갑습니다.');
+
+            }
+        );
+        // $(#id) id만 선택
+        // $(.class) class만 선택
+        // $(h1.class) h1에 class의 조합이 된 엘리먼트를 선택
+        // $(h1.classone.classtwo#idone#idtwo)
+        // 필터(기본필터, 속성필터, 차일드필터, 컨텐츠필터)
+        //:even
+        //:odd
+        //:first
+        //:last
+        //:nth-child(2)
+        //:nth-child(2n)
+    </script>
+</body>
+
+</html>

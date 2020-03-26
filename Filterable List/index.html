@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <title>My List</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-align">
+            MY List
+        </h1>
+        <input type="text" id='filterInput' placeholder="검색어 입력">
+        <ul class="collection with-header" id="names">
+            <li class="collection-header">
+                <h5>가</h5>
+            </li>
+            <li class="collection-item">
+                <a href="#">가나</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">가나다라</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">가림</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">가위</a>
+            </li>
+            <li class="collection-header">
+                <h5>나</h5>
+            </li>
+            <li class="collection-item">
+                <a href="#">나라</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">나다</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">나이테</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">나랑드사이다</a>
+            </li>
+            <li class="collection-header">
+                <h5>다</h5>
+            </li>
+            <li class="collection-item">
+                <a href="#">다리미</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">다람쥐</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">다이</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">다리</a>
+            </li> 
+        </ul>
+    </div>
+
+    <script>
+        
+        let filterInput = document.querySelector('#filterInput');
+        //이벤트 추가
+        filterInput.addEventListener('keyup', filterNames);
+
+        function filterNames(){
+            //input 값 얻기
+            let filterValue = filterInput.value.toUpperCase();
+
+            //ul 이름 얻기
+            let ul = document.querySelector('#names');
+            //ul 에서 li 얻기
+            let li = ul.querySelectorAll('li.collection-item');
+
+            for(let i = 0; i < li.length; i++){
+                let a = li[i].getElementsByTagName('a')[0];
+            if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+                li[i].style.display = '';
+            } else{
+                li[i].style.display = 'none'
+            }
+            }
+
+
+        }
+
+    </script>
+</body>
+</html>
